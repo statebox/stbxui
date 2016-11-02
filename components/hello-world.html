@@ -1,0 +1,13 @@
+<h1>Hello {{ @this.uppercaseIt(name) }}!</h1>
+
+<link rel='ractive' href='./subcomponent.html'>
+
+<subcomponent></subcomponent>
+
+<script>
+const R = require('ramda')
+component.exports = {
+  data: { name: 'thing' },
+  uppercaseIt: R.toUpper
+}
+</script>
